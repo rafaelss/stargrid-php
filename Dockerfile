@@ -28,3 +28,6 @@ RUN apt-get update && apt-get install -y \
   && rm -rf /var/lib/apt/lists/*
 RUN docker-php-ext-install mbstring pdo_mysql curl json intl gd xml zip bz2 opcache
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+RUN curl -LO https://deployer.org/deployer.phar && \
+  mv deployer.phar /usr/local/bin/dep && \
+  chmod +x /usr/local/bin/dep
