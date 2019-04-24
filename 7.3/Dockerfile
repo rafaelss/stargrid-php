@@ -1,4 +1,4 @@
-FROM php:7.2
+FROM php:7.3
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
   git \
@@ -19,6 +19,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   libxml2-dev \
   libxpm-dev \
   libzip-dev \
+  ssh \
   unzip \
   zlib1g-dev && \
   apt-get clean && \
